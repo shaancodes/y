@@ -5,7 +5,14 @@
         <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
          
     </head>
-  <script>    
+ 
+    <body>
+        <input id="query" value='cats' type="text"/>
+        <button onclick="search()">Search</button>
+        <pre id="response"></pre>
+    </body>
+
+     <script>    
     // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 // Called automatically when JavaScript client library is loaded.
@@ -33,12 +40,5 @@ function onSearchResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     document.getElementById('response').innerHTML = responseString;
     </script>
-    <body>
-        <input id="query" value='cats' type="text"/>
-        <button onclick="search()">Search</button>
-        <pre id="response"></pre>
-    </body>
-
-    
     
 </html>
